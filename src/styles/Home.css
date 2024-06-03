@@ -1,0 +1,15 @@
+#home{
+  padding-left: 15%;
+  padding-right: 18%;
+  z-index: 10;
+  margin-left: auto;
+  margin-right: auto;
+  height: 570px;
+  /* margin-bottom: 20px; */
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-gap: 10px;
+}

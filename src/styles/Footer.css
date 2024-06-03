@@ -1,0 +1,218 @@
+#footer {
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-right: 18%;
+  padding-left: 15%; */
+}
+
+.hr-style {
+  height: 5px; /* Adjust the height as needed */
+  background-color: #0F0F0F; /* Change to the desired color */
+  width: 100%; /* Adjust the width as needed */
+}
+
+.last-part {
+  background-color: #0F0F0F; /* Change to the desired color */
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  margin-bottom:-100px;
+}
+
+.foot {
+  background-color: #0F0F0F; /* Change to the desired color */
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  width: 100%;
+  margin-bottom: -10px;
+  padding-bottom: 60px;
+  height: 530px;
+}
+
+.footer-title {
+  font-family: "Karla", monospace;
+  color: white;
+  font-size: 18px;
+  line-height: 1;
+  /* padding-top: -1500px; */
+}
+
+.footer-text {
+  font-family: "Karla", monospace;
+  color: white;
+  font-size: 18px;
+  line-height: 1;
+  padding-right: 35px;
+  margin-left: 0;
+}
+.footer-text p:first-of-type {
+  /* margin-left: 20px; */
+  font-family: "Karla";
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 4px; /* Adjust the value as needed */
+  margin-top: 17%;
+}
+.footer-text p {
+  font-family: "Karla";
+  color: white;
+  font-size: 15px;
+  font-weight: 100; 
+  line-height: 1;
+  margin-bottom: 15px;
+  letter-spacing: 1px; /* Adjust the value as needed */
+  margin-top: 5%;
+  text-align: left;
+}
+
+.links-container {
+  color: gray !important;
+}
+a {
+  font-family: "Karla", monospace !important;
+  font-size: 14px;
+  color: gray;
+  line-height: 1.5; /* Adjust the value to increase the spacing between lines */
+}
+a:hover {
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  /* padding-right:3%; */
+  /* padding-left: 15%;
+  padding-right: 18%; */
+}
+
+/* contact card styling */
+.connect-section {
+  background-color: rgba(255, 255, 255, 0);
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 600px;
+  width: 100%;
+}
+
+.connect-form {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  padding-top: 120px;
+  /* padding-left:; */
+  padding-right: 90px;
+}
+
+.name-input,
+.email-input {
+  width: 400px;
+  height: 40px;
+  margin-bottom: 20px;
+  font-family: "Karla", monospace;
+  border-radius: 17px;
+  padding-left: 30px;
+  color: white;
+  background-color: transparent;
+  border: 0.5px solid #ffffff;
+}
+.message-input {
+  width: 372px;
+  resize: none;
+  color: white;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 17px;
+  font-family: "Karla", monospace;
+  background-color: transparent;
+  border: 0.5px solid #ffffff;
+}
+.message-div,
+.name-div,
+.email-div {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  flex-direction: column;
+}
+
+.connect-button {
+  width: 100px;
+  height: 30px;
+  border-radius: 14px;
+  background-color: #d9d9d93c;
+  font-family: "Karla", monospace;
+  color: white;
+  transition: all 500ms;
+  cursor: pointer;
+  border: 0px solid #ffffff;
+}
+
+.connect-button:hover {
+  transform: translateY(-3px);
+}
+
+.error {
+  margin-top: -15px;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  font-family: "Karla", monospace;
+}
+
+.success {
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  font-family: "Karla", monospace;
+  margin-top: 10px;
+  transition: all 500ms;
+}
+
+@media (max-width: 69em) {
+  .last-part {
+    height: 1100px;
+  }
+  .connect-section {
+    grid-template-columns: 1fr;
+    height: 950px;
+  }
+  .connect-form {
+    margin: 0;
+    margin-top: 0%;
+  }
+}
+
+@media (max-width: 45em) {
+  .message-input {
+    width: 70vw;
+  }
+  .email-input {
+    width: 80vw;
+  }
+  .name-input {
+    width: 80vw;
+  }
+  .footer-text p:first-child {
+    font-size: 18px;
+  }
+  .footer-text p:nth-child(2) {
+    font-size: 12px;
+  }
+
+  .linkedin {
+    width: 6vw;
+    margin-right: 3px;
+  }
+  .github {
+    width: 6vw;
+  }
+}
