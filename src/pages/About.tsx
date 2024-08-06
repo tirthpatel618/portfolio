@@ -38,7 +38,6 @@ class About extends React.Component<{}, AboutState> {
       <mark>Keras</mark> {" "}
       <mark>Node.js</mark> {" "}
       <mark>React.js</mark> {" "}
-      <mark>Java</mark> {" "}
       <mark>AWS</mark> {" "}
       <mark>GCS</mark>
       </p>
