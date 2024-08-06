@@ -29,102 +29,108 @@ const NavBar: React.FC = () => {
   return (
     <NavContainer>
       <ContainerIcon>
-      <div className={`home-nav ${isTop ? 'transparent' : 'white'}`}>
-        <ul id="icon-navigation" className={`icon-navigation ${visible ? 'visible' : ''}`}>          
+        <div className={`home-nav ${isTop ? 'transparent' : 'white'}`}>
+          <ul id="icon-navigation" className={`icon-navigation ${visible ? 'visible' : ''}`}>
             <li>
-            <ScrollLink
-            activeClass="active" to="home"
-            spy={true} smooth={true} offset={-100}>
-              <img src={"/assets/arrow.svg"}  style={{  marginTop: '6px' }}
-                className="arrow-image"
-                alt="Arrow icon"
-                id="arrow-image"
+              <ScrollLink
+                activeClass="active" to="home"
+                spy={true} smooth={true} offset={-100}>
+                <img src={"/assets/arrow.svg"} style={{ marginTop: '6px' }}
+                  className="arrow-image"
+                  alt="Arrow icon"
+                  id="arrow-image"
                 />
-            </ScrollLink>
+              </ScrollLink>
             </li>
           </ul>
         </div>
       </ContainerIcon>
       <ContainerLeft>
-      <div style={{backdropFilter:'blur(0.1rem)'}}>
-      <FadeIn>
-      
-        <div className={`left-nav ${isTop ? 'transparent' : 'white'}`}>
-        <ul id="primary-navigation" className={`primary-navigation ${visible ? 'visible' : ''}`}>
-          <li>
-            <ScrollLink
-              activeClass="active" to="about"
-              spy={true} smooth={true} offset={-100}>
-              <p>
-              ./ about
-            </p>
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              activeClass="active" to="experience"
-              spy={true} smooth={true} offset={-100}>
-              <p style={{marginLeft:'-45px'}}>
-              ./ experience
-            </p>
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              activeClass="active" to="projects"
-              spy={true} smooth={true} offset={-100}>
-              <p>
-              ./ software-creations
-            </p>
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              activeClass="active" to="footer"
-              spy={true} smooth={true}>
-              <p>
-              ./ contact
-            </p>
-            </ScrollLink>
-          </li>
-          </ul>
+        <div style={{ backdropFilter: 'blur(0.1rem)' }}>
+          <FadeIn>
+            <div className={`left-nav ${isTop ? 'transparent' : 'white'}`}>
+              <ul id="primary-navigation" className={`primary-navigation ${visible ? 'visible' : ''}`}>
+                <li>
+                  <ScrollLink
+                    activeClass="active" to="about"
+                    spy={true} smooth={true} offset={-100}>
+                    <p>
+                      about
+                    </p>
+                  </ScrollLink>
+                </li>
+                <li>
+                  <ScrollLink
+                    activeClass="active" to="experience"
+                    spy={true} smooth={true} offset={-100}>
+                    <p style={{ marginLeft: '-45px' }}>
+                      experience
+                    </p>
+                  </ScrollLink>
+                </li>
+                <li>
+                  <ScrollLink
+                    activeClass="active" to="projects"
+                    spy={true} smooth={true} offset={-100}>
+                    <p>
+                      projects
+                    </p>
+                  </ScrollLink>
+                </li>
+                <li>
+                  <ScrollLink
+                    activeClass="active" to="footer"
+                    spy={true} smooth={true}>
+                    <p>
+                      contact
+                    </p>
+                  </ScrollLink>
+                </li>
+                <li>
+                  <a href="/assets/Tirth's Resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <p>
+                      resume
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <Filter className="flt_svg hide" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="flt_tag">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="flt_tag" />
+                  <feComposite in="SourceGraphic" in2="flt_tag" operator="atop" />
+                </filter>
+              </defs>
+            </Filter>
+          </FadeIn>
         </div>
-        <Filter className="flt_svg hide" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="flt_tag">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />  
-              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="flt_tag" />
-              <feComposite in="SourceGraphic" in2="flt_tag" operator="atop"/>
-            </filter>
-          </defs>
-        </Filter>
-      </FadeIn>
-      </div>
-    </ContainerLeft>
-    <ContainerRight>
-    <div style={{backdropFilter:'blur(0.1rem)', marginLeft:'15px'}}>
-      <FadeIn delay={`300ms`}>
-      <div className={`right-nav ${isTop ? 'transparent' : 'white'}`}>
-          <a href="mailto:rosannezhu@gmail.com" style={{color:'#0F0F0F'}}>
-            <EmailRoundedIcon style={{ fontSize: 25, marginRight: '45px', marginTop: '5px'  }}></EmailRoundedIcon>
-          </a>
-          <a href="https://github.com/roskzhu" style={{color:'#0F0F0F'}}>
-            <GitHubIcon style={{ fontSize: 22, marginRight: '45px', marginTop: '5px'  }}></GitHubIcon>
-          </a>
-          <a href="https://www.linkedin.com/in/rosanne-zhu" style={{color:'#0F0F0F'}}>
-            <LinkedInIcon style={{ fontSize: 27, marginTop: '5px' }}></LinkedInIcon>
-          </a>
-        </div>
-        <Filter className="flt_svg hide" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="flt_tag">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />  
-              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="flt_tag" />
-              <feComposite in="SourceGraphic" in2="flt_tag" operator="atop"/>
-            </filter>
-          </defs>
-        </Filter>
-        </FadeIn>
+      </ContainerLeft>
+      <ContainerRight>
+        <div style={{ backdropFilter: 'blur(0.1rem)', marginLeft: '15px' }}>
+          <FadeIn delay={`300ms`}>
+            <div className={`right-nav ${isTop ? 'transparent' : 'white'}`}>
+              <a href="mailto:t83patel@uwaterloo.ca" style={{ color: '#0F0F0F' }}>
+                <EmailRoundedIcon style={{ fontSize: 25, marginRight: '45px', marginTop: '5px' }}></EmailRoundedIcon>
+              </a>
+              <a href="https://github.com/tirthpatel618" style={{ color: '#0F0F0F' }}>
+                <GitHubIcon style={{ fontSize: 22, marginRight: '45px', marginTop: '5px' }}></GitHubIcon>
+              </a>
+              <a href="https://www.linkedin.com/in/tirthpatel618" style={{ color: '#0F0F0F' }}>
+                <LinkedInIcon style={{ fontSize: 27, marginTop: '5px' }}></LinkedInIcon>
+              </a>
+            </div>
+            <Filter className="flt_svg hide" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="flt_tag">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="flt_tag" />
+                  <feComposite in="SourceGraphic" in2="flt_tag" operator="atop" />
+                </filter>
+              </defs>
+            </Filter>
+          </FadeIn>
         </div>
       </ContainerRight>
     </NavContainer>
@@ -164,4 +170,4 @@ const Filter = styled.svg`
   visibility: hidden;
 `
 
-export default NavBar
+export default NavBar;

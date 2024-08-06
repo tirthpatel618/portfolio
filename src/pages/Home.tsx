@@ -12,7 +12,7 @@ const Home: React.FC = () => {
         <FadeIn delay={`200ms`}>
           <Typewriter 
             onInit={(typewriter) => {
-              typewriter.typeString('Hi! I\'m Rosanne.')
+              typewriter.typeString('Hi! I\'m  Tirth.')
                 .callFunction(() => {
                   console.log('String typed out!');
                 })

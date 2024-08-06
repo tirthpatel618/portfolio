@@ -1,136 +1,102 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import FadeInSection from "./FadeIn";
 
-const isHorizontal: boolean = window.innerWidth < 600;
-
 interface TabPanelProps {
   children?: React.ReactNode;
-  index: any;
-  value: any;
 }
 
 function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
+  const { children, ...other } = props;
 
-  if (isHorizontal) {
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`full-width-tabpanel-${index}`}
-        aria-labelledby={`full-width-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box p={3}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
-  } else {
-    return (
-      <div role="tabpanel" hidden={value !== index} id={`vertical-tabpanel`} {...other}>
-        {value === index && (
-          <Box p={3}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
-  }
+  return (
+    <div role="tabpanel" {...other}>
+      <Box p={3}>
+        <Typography>{children}</Typography>
+      </Box>
+    </div>
+  );
 }
 
 TabPanel.propTypes = {
   children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
 };
-
-function a11yProps(index: number) {
-  if (isHorizontal) {
-    return {
-      id: `full-width-tab-${index}`,
-      "aria-controls": `full-width-tabpanel-${index}`,
-    };
-  } else {
-    return {
-      id: `vertical-tab-${index}`,
-    };
-  }
-}
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     display: "flex",
-    height: 200,
+    flexDirection: "column",
   },
-  tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
+  experienceItem: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: "20px",
+  },
+  experienceText: {
+    flexGrow: 1,
+  },
+  companyImage: {
+    marginLeft: "20px",
+    width: "100px",
+    height: "100px",
+    objectFit: "cover",
   },
 }));
 
 const Work: React.FC = () => {
   const classes = useStyles();
-  const [value, setValue] = useState(0);
 
-  const experienceItems: { [key: string]: { jobTitle: string; duration: string; desc: string[]; techStack: string; } } = {
-    BMO: {
-      jobTitle: "Software Engineer Intern @",
-      duration: "SEPT 2023 - PRESENT",
+  const experienceItems: { [key: string]: { jobTitle: string; duration: string; desc: string[]; techStack: string; image: string; } } = {
+    "MOH": {
+      jobTitle: "Software Developer Intern @ Ontario Ministry of Health",
+      duration: "MAY 2024 - AUG 2024",
       desc: [
-        "Currently working on the Digital Core AI team, helping with document verification to automate mortgage loans."      ],
-      techStack: "Python, AWS, SQL, Flask, React.js, TypeScript, Redux",
+        "Working with the data platforms team to load data to serve business partners"
+      ],
+      techStack: "Python, AWS, SQL, Docker, Kubernetes",
+      image: "assets/moh.png", 
     },
-  };
-
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    setValue(newValue);
+    "UWFE": {
+      jobTitle: "Firmware Engineer @ UW Formula Electric",
+      duration: "JAN 2024 - CURRENT",
+      desc: [
+        "Working with the firmware team to test electric components of the car"
+      ],
+      techStack: "C, STM32, CAN",
+      image: "assets/waterlooformulaelectric_logo.jpeg", 
+    }
   };
 
   return (
     <div className={classes.root}>
-      <Tabs
-        orientation={!isHorizontal ? "vertical" : undefined}
-        variant={isHorizontal ? "fullWidth" : "scrollable"}
-        value={value}
-        onChange={handleChange}
-        className={classes.tabs}
-      >
-        {Object.keys(experienceItems).map((key, i) => (
-          <Tab key={i} label={isHorizontal ? `0${i}.` : key} {...a11yProps(i)} />
-        ))}
-      </Tabs>
       {Object.keys(experienceItems).map((key, i) => (
-        <TabPanel key={i} value={value} index={i}>
-          <span className="joblist-job-title">{experienceItems[key]["jobTitle"] + " "}</span>
-          <span className="joblist-job-company">{key}</span>
-          <div className="joblist-duration">{experienceItems[key]["duration"]}</div>
-          <ul className="job-description">
-            {experienceItems[key]["desc"].map(function (descItem, i) {
-              return (
+        <div key={i} className={classes.experienceItem}>
+          <div className={classes.experienceText}>
+            <span className="joblist-job-title">{experienceItems[key]["jobTitle"]}</span>
+            <div className="joblist-duration">{experienceItems[key]["duration"]}</div>
+            <ul className="job-description">
+              {experienceItems[key]["desc"].map((descItem, i) => (
                 <FadeInSection key={i} delay={`${i + 1}00ms`}>
                   <li>{descItem}</li>
                 </FadeInSection>
-              );
-            })}
-          </ul>
-          <div className="card-tech">
-                    {experienceItems[key]["techStack"].split(", ").map((item: string, index: number) => (
-                      <span key={index}>
-                        {index > 0 ? " " : ""}
-                        <mark>{item}</mark>
-                      </span>
-                    ))}
-                  </div>
-        </TabPanel>
+              ))}
+            </ul>
+            <div className="card-tech">
+              {experienceItems[key]["techStack"].split(", ").map((item: string, index: number) => (
+                <span key={index}>
+                  {index > 0 ? " " : ""}
+                  <mark>{item}</mark>
+                </span>
+              ))}
+            </div>
+          </div>
+          <img src={experienceItems[key]["image"]} alt={`${key} logo`} className={classes.companyImage} />
+        </div>
       ))}
     </div>
   );

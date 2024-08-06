@@ -55,6 +55,9 @@ p mark {
   border-radius: 6px;
   padding: 0 5px;
   line-height: 1.4;
+  font-size: 1.2em;
+  display: inline-block; /* Ensures the padding and border-radius work as expected */
+  margin: 5px;
 }
 
 .about-description ul {
@@ -90,6 +93,23 @@ p mark {
   text-align: justify;
   margin: 0;
   width: 500px;
+}
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tech-item {
+  background-color: #DAE2F5;
+  color: blue;
+  border-radius: 6px;
+  padding: 10px 17px;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-description a,
