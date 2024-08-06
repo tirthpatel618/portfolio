@@ -38,6 +38,7 @@ class About extends React.Component<{}, AboutState> {
           <div className="tech-item">C/C++</div>
           <div className="tech-item">JavaScript (Node, React, Express)</div>
           <div className="tech-item">TypeScript</div>
+          <div className="tech-item">Swift</div>
           <div className="tech-item">AWS (Redshift, Glue, Lambda, EC2, Sagemaker)</div>
           <div className="tech-item">Postgres</div>
           <div className="tech-item">Docker</div>
