@@ -48,7 +48,7 @@ class Projects extends Component<{}, ProjectsState> {
           "https://github.com/tirthpatel618/Form_corrector",
         image: "/assets/freethrow.png" 
       },
-      "Login Code Generatoe Web Extension": {
+      "Login Code Generator Web Extension": {
         desc:
           "A Safari web extension that generates login codes for websites that require 2FA.",
         techStack: "Swift, Javascript",
