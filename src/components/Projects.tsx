@@ -24,37 +24,37 @@ class Projects extends Component<{}, ProjectsState> {
   }
   render() {
     const projects: any = {
-      "iSpy": {
+      "ForexTrader": {
         desc:
-          "A facial recognition web application that recognizes and remembers the faces of different individuals in real-time footage.",
-        techStack: "Python, Tensorflow, OpenCV, Javascript",
-        link: "https://github.com/roskzhu/iSpy",
+          "A dynamic trading platoform utilizing a DNN to predict forex trends and make trades.",
+        techStack: "Python, Tensorflow, Keras, OANDA API",
+        link: "https://github.com/tirthpatel618/FOREXtrading",
         open: "",
-        image: "/assets/ispy.png" // Add image path here
+        image: "/assets/forex.jpeg" // Add image path here
       },
-      "CollaboraCart": {
+      "TV Reference Cyclic Paradox Finder": {
         desc:
-          "A supply ordering platform that cuts costs for small businesses by consolidating orders for bulk orders.",
-        techStack: "Python (Flask), SQLite, React, Tailwind CSS",
-        link: "https://github.com/roskzhu/CollaboraCart", 
+          "A web-app that finds cyclic paradoxes in TV shows by analyzing the script and character interactions.",
+        techStack: "Python, React, typescript, ",
+        link: "https://github.com/tirthpatel618/Cyclic-TV-Paradox-Finder", 
         open: "",
-        image: "/assets/collaboracart.png" // Add image path here
+        image: "/assets/paradox.png" // Add image path here
       },
-      "FridgeSmart": {
+      "Basketball Form Corrector": {
         desc:
-          "A  full-stack computer-vision web application that scans your fridge for ingredients and recommends recipes.",
-        techStack: "Javascript, YOLOv8, Roboflow",
+          "A python script that uses a DNN to analyze basketball shooting form and provide feedback to the user.",
+        techStack: "Python, Tensorflow, Keras",
         link:
-          "https://github.com/roskzhu/FridgeSmart",
-        image: "/assets/fridgesmart.png" 
+          "https://github.com/tirthpatel618/Form_corrector",
+        image: "/assets/freethrow.png" 
       },
-      "Tetris": {
+      "Login Code Generatoe Web Extension": {
         desc:
-          "A two player variation of Tetris - made with random block generation, adjustable difficulty levels, and other bonus features.",
-        techStack: "C++, XWindows",
-        link: "https://github.com/roskzhu/Biquadris",
+          "A Safari web extension that generates login codes for websites that require 2FA.",
+        techStack: "Swift, Javascript",
+        link: "https://github.com/tirthpatel618/Login-Automator-Extension",
         open: "",
-        image: "/assets/tetris.png" 
+        image: "/assets/codegen.png" 
         }
         };
 
