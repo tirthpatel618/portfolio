@@ -23,7 +23,7 @@ class About extends React.Component<{}, AboutState> {
   }
   render() {
     const one = (
-      <h1 style={{paddingTop:'15px'}}>Enjoy finding solutions to problems and creating meaningful tech.</h1>
+      <h1 style={{paddingTop:'15px'}}>Enjoy finding solutions to complex problems and creating meaningful tech.</h1>
     );
     const two = (
       <h2>
