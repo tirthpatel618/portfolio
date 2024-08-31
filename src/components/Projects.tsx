@@ -26,7 +26,7 @@ class Projects extends Component<{}, ProjectsState> {
     const projects: any = {
       "ForexTrader": {
         desc:
-          "A dynamic trading platoform utilizing a DNN to predict forex trends and make trades.",
+          "A dynamic trading platform utilizing a DNN to predict forex trends and make trades.",
         techStack: "Python, Tensorflow, Keras, OANDA API",
         link: "https://github.com/tirthpatel618/FOREXtrading",
         open: "",
@@ -35,7 +35,7 @@ class Projects extends Component<{}, ProjectsState> {
       "TV Reference Cyclic Paradox Finder": {
         desc:
           "A web-app that finds cyclic paradoxes in TV shows by analyzing the script and character interactions.",
-        techStack: "Python, React, typescript, ",
+        techStack: "Python, React, Typescript, HTML, CSS, NodeJS",
         link: "https://github.com/tirthpatel618/Cyclic-TV-Paradox-Finder", 
         open: "",
         image: "/assets/paradox.png" // Add image path here
@@ -43,15 +43,15 @@ class Projects extends Component<{}, ProjectsState> {
       "Basketball Form Corrector": {
         desc:
           "A python script that uses a DNN to analyze basketball shooting form and provide feedback to the user.",
-        techStack: "Python, Tensorflow, Keras",
+        techStack: "Python, Tensorflow, Scikit-learn, Pandas, Numpy",
         link:
           "https://github.com/tirthpatel618/Form_corrector",
         image: "/assets/freethrow.png" 
       },
       "Login Code Generator Web Extension": {
         desc:
-          "A Safari web extension that generates login codes for websites that require 2FA.",
-        techStack: "Swift, Javascript",
+          "A Safari web extension that generates login codes for websites that require 2FA using email.",
+        techStack: "Swift, Javascript, HTML, CSS, NodeJS",
         link: "https://github.com/tirthpatel618/Login-Automator-Extension",
         open: "",
         image: "/assets/codegen.png" 

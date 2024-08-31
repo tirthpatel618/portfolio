@@ -56,9 +56,9 @@ const Work: React.FC = () => {
       jobTitle: "Software Developer Intern @ Ontario Ministry of Health",
       duration: "MAY 2024 - AUG 2024",
       desc: [
-        "Working with the data platforms team to load data to serve business partners"
+        "Working with the data tools team to load data to serve business partners"
       ],
-      techStack: "Python, AWS, SQL, Docker, Kubernetes",
+      techStack: "Python, AWS Redshift, Glue, Lambda, EC2, SQL, Docker, Kubernetes",
       image: "assets/moh.png", 
     },
     "UWFE": {
@@ -69,6 +69,15 @@ const Work: React.FC = () => {
       ],
       techStack: "C, STM32, CAN",
       image: "assets/waterlooformulaelectric_logo.jpeg", 
+    },
+    "Nuvei": {
+      jobTitle: "Softwate Engineer Intern @ Nuvei",
+      duration: "MAY 2023 - AUG 2023",
+      desc: [
+        "Working with the risk assessment team to create models to automate client risk assessment"
+      ],
+      techStack: "Python, MongoDB, Keras, Tensorflow",
+      image: "assets/nuvei_logo.jpeg", 
     }
   };
 
