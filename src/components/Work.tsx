@@ -62,7 +62,7 @@ const Work: React.FC = () => {
       image: "assets/BMO.png", 
     },
     "MOH": {
-      jobTitle: "Software Developer Intern @ Ontario Ministry of Health",
+      jobTitle: "Software Engineer Intern @ Ontario Ministry of Health",
       duration: "MAY 2024 - AUG 2024",
       desc: [
         "Working with the data tools team to load data to serve business partners"
