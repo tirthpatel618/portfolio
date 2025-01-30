@@ -35,10 +35,10 @@ const Home: React.FC = () => {
           <div style={{marginTop:'0px'}}>
         <DescContainer>
           <GridContainer>
-            <h2>previously</h2>
+            <h2>currently</h2>
             <h3>studying</h3>
-            <p>a Software Developer Intern <br/>  @ <mark>Ontario Ministry of Health</mark></p>
-            <h1>Computer Science & Artifical Intelligence <br/> @ <mark>the University of Waterloo</mark></h1>
+            <p>a Machine Learning Intern <br/>  @ <mark>BMO Financial Group</mark></p>
+            <h1>Computer Science & Stats <br/> @ <mark>the University of Waterloo</mark></h1>
           </GridContainer>
         </DescContainer>
         </div>

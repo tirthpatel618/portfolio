@@ -34,7 +34,7 @@ class About extends React.Component<{}, AboutState> {
       <p>
         <span style={{ fontFamily: 'Karla, sans-serif', fontSize: '18px' }}>Recently I've been working with these technologies:</span><br />
         <div className="tech-list">
-          <div className="tech-item">Python (Keras, Tensorflow, Flask)</div>
+          <div className="tech-item">Python (Pytorch, Flask)</div>
           <div className="tech-item">C/C++</div>
           <div className="tech-item">JavaScript (Node, React, Express)</div>
           <div className="tech-item">TypeScript</div>
@@ -47,7 +47,6 @@ class About extends React.Component<{}, AboutState> {
       </p>
     );
 
-
     return (
       <div id="about" className="about-container">
         <FadeIn delay={`1200ms`}>
@@ -55,10 +54,21 @@ class About extends React.Component<{}, AboutState> {
             <span className="section-title">about</span>
           </div>
           <div className="about-content">
-            <div className="about-description">
-              {[one]}
-              {[two]}
-              {[three]}
+          <div className="about-flex-container" style={{ display: 'flex', alignItems: 'center' }}>
+              <div className="about-description" style={{ flex: 2 }}>
+                {[one]}
+                {[two]}
+                {[three]}
+              </div>
+              <div className="profile-photo-container" style={{ flex: 1, textAlign: 'center' }}>
+                <img 
+                  src="assets/tirth_profile_cropped.jpg"
+                  alt="Profile"
+                  className="profile-photo"
+                  style={{ width: '100%', height: 'auto' }}  
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </FadeIn>

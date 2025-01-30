@@ -52,23 +52,23 @@ const Work: React.FC = () => {
   const classes = useStyles();
 
   const experienceItems: { [key: string]: { jobTitle: string; duration: string; desc: string[]; techStack: string; image: string; } } = {
+    "BMO Financial Group": {
+      jobTitle: "Machine Learning Engineer Intern @ BMO Financial Group",
+      duration: "JAN 2025 - MAY 2025",
+      desc: [
+        "Working with the data audits team to innovate the corporate audit process",
+      ],
+      techStack: "Python(Pytorch, Transformers, Flask), AWS Sagemaker, Javascript, React",
+      image: "assets/BMO.png", 
+    },
     "MOH": {
       jobTitle: "Software Developer Intern @ Ontario Ministry of Health",
       duration: "MAY 2024 - AUG 2024",
       desc: [
         "Working with the data tools team to load data to serve business partners"
       ],
-      techStack: "Python, AWS Redshift, Glue, Lambda, EC2, SQL, Docker, Kubernetes",
+      techStack: "Python, AWS(Redshift, Glue, Lambda, EC2), SQL, Docker, Kubernetes",
       image: "assets/moh.png", 
-    },
-    "UWFE": {
-      jobTitle: "Firmware Engineer @ UW Formula Electric",
-      duration: "JAN 2024 - CURRENT",
-      desc: [
-        "Working with the firmware team to test electric components of the car"
-      ],
-      techStack: "C, STM32, CAN",
-      image: "assets/waterlooformulaelectric_logo.jpeg", 
     },
     "Nuvei": {
       jobTitle: "Softwate Engineer Intern @ Nuvei",

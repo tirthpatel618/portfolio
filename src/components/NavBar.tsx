@@ -86,13 +86,6 @@ const NavBar: React.FC = () => {
                     </p>
                   </ScrollLink>
                 </li>
-                <li>
-                  <a href="/assets/Tirth's Resume.pdf" target="_blank" rel="noopener noreferrer">
-                    <p>
-                      resume
-                    </p>
-                  </a>
-                </li>
               </ul>
             </div>
             <Filter className="flt_svg hide" xmlns="http://www.w3.org/2000/svg">
